@@ -1,0 +1,7 @@
+tmp=`mktemp`
+echo $@ >$tmp
+emacs -nw --load=$HOME/emacs-tkdiff/tkdiff.el --eval="(tkdiff (tkdiff-read-args-from-file \"$tmp\"))"
+
+#emacs -nw --load=$HOME/emacs-tkdiff/tkdiff.el --eval="(tkdiff \": /tmp/g4-10958/cache/depot/google3/file/base/file_unittest.cc#113 /google/src/cloud/saito/src6/google3/file/base/file_unittest.cc : /tmp/g4-10958/cache/depot/google3/util/registration/registerer_unittest.cc#14 /google/src/cloud/saito/src6/google3/util/registration/registerer_unittest.cc\")"
+
+
